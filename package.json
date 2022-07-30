@@ -7,10 +7,19 @@
     "node": ">=14.16"
   },
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "respository": {
+    "type": "git",
+    "url": "git+https://github.com/59366732/node-express.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/59366732/node-express/issues"
+  },
+  "homepage": "https://github.com/59366732/node-express",
   "dependencies": {
     "chalk": "^5.0.1",
     "debug": "^4.3.4",
