@@ -2,7 +2,10 @@
   "name": "app-05-nodeexpress",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
+  "engines": {
+    "node": ">=14.16"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,8 +17,5 @@
     "express": "^4.18.1",
     "morgan": "^1.10.0"
   },
-  "type": "module",
-  "engines": {
-    "node": ">=14.16"
-  }
+  "type": "module"
 }
