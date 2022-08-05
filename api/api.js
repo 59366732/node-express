@@ -1,8 +1,9 @@
 import express from 'express';
 import chalk from 'chalk';
 import cookieParser from 'cookie-parser';
+import morgan from 'morgan';
 const router = express.Router();
-
+router.use(morgan('combined'));
 router.use(cookieParser());
 router.get('/', async (req, res) => {
     try {

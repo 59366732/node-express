@@ -1,0 +1,8 @@
+{
+    "connector": {},
+    "formatters": [],
+    "parsers": [],
+    "hints": {
+        "button-type": "error"
+    }
+}
