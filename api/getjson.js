@@ -5,6 +5,7 @@ import morgan from 'morgan';
 const router = express.Router();
 router.use(morgan('combined'));
 router.use(cookieParser());
+
 router.get('/', async (req, res) => {
     try {
         let text = "Get data has successfully";
@@ -13,8 +14,9 @@ router.get('/', async (req, res) => {
         console.log('Cookies: ', req.cookies);
         console.log('Signed Cookies: ', req.signedCookies);
     } catch (error) {
-        console.log(chalk.green(error));
-        return res.status(500).send("Result : " + chalk.green(error));
+        console.log(chalk.red(error));
+        return res.status(500).send("Result : " + chalk.red(error));
     }
 });
+
 export default router;
