@@ -7,7 +7,6 @@ indexjs.get("/", (req, res) => {
     try {
         res.render('index', {username: "Ing Saeyang", customer: ['a', 'b', 'c']});
     } catch (error) {
-        console.log(error)
         return res.status(500).send("Result : " + chalk.red(error));
     }
 });

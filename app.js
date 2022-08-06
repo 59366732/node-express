@@ -21,7 +21,7 @@ if (web_type === "statics") {
         app.use("/api/getjson", getjson);
         app.use("/api/getejs", getejs);
     }
-    app.use("/", indexjs);
+    app.use("/index", indexjs);
 }
 app.listen(PORT, () => {
     debug("listening on port : " + chalk.green(PORT));
