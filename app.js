@@ -16,7 +16,7 @@ if (web_type === "statics") {
     const __dirname = path.dirname(__filename);
     app.use(express.static(path.join(__dirname, "/public/")));
 } else if (web_type === "dynamics") {
-    const test = false;
+    const test = true;
     if (test === true) {
         app.use("/api/getjson", getjson);
         app.use("/api/getejs", getejs);
