@@ -10,13 +10,13 @@ const PORT = process.env.PORT || 3000;
 
 import path from 'path';
 import {fileURLToPath} from 'url';
-const web_type = "dynamics";
+const web_type = "statics";
 if (web_type === "statics") {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
     app.use(express.static(path.join(__dirname, "/public/")));
 } else if (web_type === "dynamics") {
-    const test = true;
+    const test = false;
     if (test === true) {
         app.use("/api/getjson", getjson);
         app.use("/api/getejs", getejs);
