@@ -12,6 +12,11 @@ indexjs.set("view engine", "ejs");
 productRouter.route("/").get((req, res) => {
     res.render("products", products,);
 });
+productRouter.route("/:id").get((req, res) => {
+    const id = req.params.id;
+    res.send("This is product" + " " + id);
+})
+
 indexjs.use("/products", productRouter);
 
 
