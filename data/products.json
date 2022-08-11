@@ -1,8 +1,28 @@
 {
   "products": [
-    { "title": "A", "description": "aaa" },
-    { "title": "B", "description": "bbb" },
-    { "title": "C", "description": "ccc" },
-    { "title": "D", "description": "ddd" }
+    {
+      "name": "AAA",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "image": "https://i.imgur.com/oYiTqum.jpg",
+      "tag": "Aa"
+    },
+    {
+      "name": "BBB",
+      "description": "Sit amet consectetur adipisicing elit. Lorem dolor",
+      "image": "https://i.imgur.com/2DhmtJ4.jpg",
+      "tag": "Bb"
+    },
+    {
+      "name": "CCC",
+      "description": "Consectetur adipisicing elit.ipsum dolor sit amet",
+      "image": "https://i.imgur.com/oYiTqum.jpg",
+      "tag": "Cc"
+    },
+    {
+      "name": "DDD",
+      "description": "Lorem ipsum dolor Consectetur adipisicing consectetur",
+      "image": "https://i.imgur.com/2DhmtJ4.jpg",
+      "tag": "Dd"
+    }
   ]
 }
