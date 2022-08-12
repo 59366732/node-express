@@ -1,14 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
-</head>
-<body>
-    <h1>Product detail</h1>
-    <h2>Product name: <%= product.name %></h2>
-    <h3>Product description: <%= product.description %></h3>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      background: #7ed6df;
+      transition: 0.6s linear;
+    }
+
+    .product-card {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      width: 400px;
+      background: #ecedef;
+      padding: 40px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      border-radius: 20px;
+    }
+    .product-card h1 {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+    .product-card p {
+      font-size: 13px;
+      color: #bbb;
+    }
+    
+    .product-pic img{
+      object-fit: cover;
+      border-radius: 20px;
+      padding: 10px;
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      transition: 0.6s linear;
+    }
+    .product-colors {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .product-colors span {
+      width: 14px;
+      height: 14px;
+      margin: 0 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+    }
+    .blue {
+      background: #7ed6df;
+    }
+    .green {
+      background: #badc58;
+    }
+    .black {
+      background: #000000;
+    }
+    .rose {
+      background: #ff7979;
+    }
+
+    .product-colors .active:after {
+      content: "";
+      width: 22px;
+      height: 22px;
+      border: 2px solid #8888;
+      position: absolute;
+      border-radius: 50%;
+      box-sizing: border-box;
+      left: -4px;
+      top: -4px;
+    }
+    .product-info {
+      display: flex;
+      align-items: center;
+    }
+    .product-price {
+      color: #ff7979;
+      font-size: 26px;
+    }
+    .product-button {
+      margin-left: auto;
+      color: #ff7979;
+      text-decoration: none;
+      border: 2px solid;
+      padding: 8px 24px;
+      border-radius: 20px;
+      transition: 0.4s linear;
+    }
+    .product-button:hover {
+      transform: scale(1.06);
+    }
+  </style>
+  <body>
+    <%- include('../views/components/header') %>
+    <div class="product-card">
+      <h1><%= product.name %></h1>
+      <p><%= product.description %></p>
+      <div class="product-pic">
+        <img src="<%= product.image %>" alt="">
+      </div>
+      <div class="product-colors">
+        <span
+          class="rose"
+          data-color="#ff7979"
+          data-pic=""
+        ></span>
+        <span class="black" data-color="#000000" data-pic=""></span>
+        <span class="blue" data-color="#7ed6df" data-pic=""></span>
+        <span class="green" data-color="#badc58" data-pic=""></span>
+      </div>
+      <div class="product-info">
+        <div class="product-price">$<%=product.price %></div>
+        <a href="" class="product-button">Add to Cart</a>
+      </div>
+    </div>
+    <script>
+      $(".product-colors span").click(function(){
+        $(".product-colors span").removeClass("active");
+        $(this).addClass("active");
+        $("body").css("background",$(this).attr("data-color"));
+        $(".product-price").css("color",$(this).attr("data-color"));
+        $(".product-button").css("color",$(this).attr("data-color"));
+        $(".product-button:focus").css("background-color",$(this).attr("data-color"));
+        $(".product-pic").css("background-image",$(this).attr("data-pic"));
+      });
+    </script>
+  </body>
 </html>

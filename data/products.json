@@ -1,30 +1,38 @@
 [
   {
     "id": 0,
-    "name": "AAA",
+    "name": "Beats Red",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    "image": "https://i.imgur.com/oYiTqum.jpg",
-    "tag": "Aa"
+    "image": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX412?wid=2104&hei=2980&fmt=jpeg&qlt=95&.v=1580420170758",
+    "tag": "Headphones",
+    "price": 199,
+    "color": "#ff7979"
   },
   {
     "id": 1,
-    "name": "BBB",
+    "name": "Beats Black",
     "description": "Sit amet consectetur adipisicing elit. Lorem dolor",
-    "image": "https://i.imgur.com/2DhmtJ4.jpg",
-    "tag": "Bb"
+    "image": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX432?wid=2095&hei=3121&fmt=jpeg&qlt=95&.v=1570119317387",
+    "tag": "Headphones",
+    "price": 199,
+    "color": "#000000"
   },
   {
     "id": 2,
-    "name": "CCC",
+    "name": "Beats Blue",
     "description": "Consectetur adipisicing elit.ipsum dolor sit amet",
-    "image": "https://i.imgur.com/oYiTqum.jpg",
-    "tag": "Cc"
+    "image": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX402?wid=2104&hei=2980&fmt=jpeg&qlt=95&.v=1580420165023",
+    "tag": "Headphones",
+    "price": 199,
+    "color": "#7ed6df"
   },
   {
     "id": 3,
-    "name": "DDD",
+    "name": "Beats Green",
     "description": "Lorem ipsum dolor Consectetur adipisicing consectetur",
-    "image": "https://i.imgur.com/2DhmtJ4.jpg",
-    "tag": "Dd"
+    "image": "https://www.flashfly.net/wp/wp-content/uploads/2017/08/Beats-Solo3-Wireless-Headphones-Turf-Green.jpg",
+    "tag": "Headphones",
+    "price": 199,
+    "color": "#badc58"
   }
 ]
