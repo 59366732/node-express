@@ -1,27 +1,10 @@
 import express from 'express';
-import products from './data/products.json' assert {
-    type : "json"
-};
+import productsRouter from './src/router/productsRouter.js';
 const indexjs = express();
-const productRouter = express.Router();
 
 indexjs.set("views", "./src/views");
 indexjs.set("view engine", "ejs");
-
-
-productRouter.route("/").get((req, res) => {
-    res.render("products", {
-        products
-    },);
-});
-productRouter.route("/:id").get((req, res) => {
-    const id = req.params.id;
-    res.render("product", {product: products[id]});
-})
-
-indexjs.use("/products", productRouter);
-
-
+indexjs.use("/products", productsRouter);
 indexjs.get("/", (req, res) => {
     try {
         res.render('index', {
